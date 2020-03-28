@@ -12,7 +12,8 @@ import {
   RECEIVE_INFO,
   RECEIVE_RATINGS,
   ADD_FOOD_COUNT,
-  ODD_FOOD_COUNT
+  ODD_FOOD_COUNT,
+  CLEAR_CAR
 } from './mutation-types'
 
 export default{
@@ -62,5 +63,12 @@ export default{
     }else{
       food.count++;
     }
+  },
+
+  [CLEAR_CAR](state){
+    //清除food的count
+    state.cartFoods.forEach(food=>food.count=0);
+    //移除购物车所有对象
+    state.cartFoods=[]
   }
 }

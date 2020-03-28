@@ -15,4 +15,7 @@ export const ADD_FOOD_COUNT='add_food_count';
 export const ODD_FOOD_COUNT='odd_food_count';
 
 
+export const CLEAR_CAR='clear_car';//清空购物车
+
+
 

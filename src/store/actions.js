@@ -11,7 +11,8 @@ import {
   RECEIVE_INFO,
   RECEIVE_GOODS,
   ADD_FOOD_COUNT,
-  ODD_FOOD_COUNT
+  ODD_FOOD_COUNT,
+  CLEAR_CAR
 } from './mutation-types'
 
 import {
@@ -108,18 +109,17 @@ export default{
   },
 
   //同步更新食物中的count数量
-  updateCount({commit},{flag,food}){
-      if(flag) {
-        commit(ODD_FOOD_COUNT, {food})
-      }else {
-        commit(ADD_FOOD_COUNT,  {food})
-      }
+  updateCount({commit},{flag,food}) {
+    if (flag) {
+      commit(ODD_FOOD_COUNT, {food})
+    } else {
+      commit(ADD_FOOD_COUNT, {food})
+    }
 
-  }
-
+  },
   //同步清空购物车
   clearCart({commit}){
-
+    commit(CLEAR_CAR);
   }
 
 
